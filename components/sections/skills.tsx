@@ -3,7 +3,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Progress } from '@/components/ui/progress'
 import { Badge } from '@/components/ui/badge'
 import { Code, Settings, Lightbulb, Clock, Brain, Palette } from 'lucide-react'
 
@@ -111,8 +110,12 @@ export function SkillsSection() {
                         whileInView={{ width: "100%" }}
                         transition={{ duration: 1, delay: categoryIndex * 0.2 + skillIndex * 0.1 + 0.3 }}
                         viewport={{ once: true }}
+                        className="relative h-2 bg-secondary rounded-full overflow-hidden"
                       >
-                        <Progress value={skill.level} className="h-2" />
+                        <div
+                          className="h-full bg-primary rounded-full"
+                          style={{ width: `${skill.level}%` }}
+                        />
                       </motion.div>
                     </motion.div>
                   ))}

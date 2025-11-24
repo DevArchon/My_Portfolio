@@ -5,9 +5,6 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   images: { unoptimized: true },
-  experimental: {
-    optimizePackageImports: ['framer-motion', 'lucide-react'],
-  },
 };
 
 module.exports = nextConfig;
